@@ -7,7 +7,7 @@ PangramFinder.prototype.isPangram = function () {
   const lowerCasePhrase = this.phrase.toLowerCase();
   return this.alphabet.reduce((result, letter) => {
     return result && lowerCasePhrase.includes(letter);
-  });
+  }, true);
 }
 
 module.exports = PangramFinder;
